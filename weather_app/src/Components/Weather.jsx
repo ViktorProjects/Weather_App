@@ -29,17 +29,17 @@ const Weather = () => {
                     type="text"/>
             </div>
             <div className={"w-full h-full flex flex-col text-center justify-center items-center"}>
-                <div>{data.name}</div>
-                <div>
+                <div className={"text-6xl p-4"}>{data.name}</div>
+                <div className={"text-2xl p-4"}>
                     {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
                 </div>
-                <div>
+                <div className={"text-2xl p-4"}>
                     {data.weather ? <p>{data.weather[0].main}</p> : null}
                 </div>
-                <div>
+                <div className={"text-2xl p-4"}>
                     {data.main ? <p className='bold'>{data.main.humidity}%</p> : null}
                 </div>
-                <div>
+                <div className={"text-2xl p-4"}>
                     {data.wind ? <p className='bold'>{data.wind.speed.toFixed()} MPH</p> : null}
                 </div>
             </div>
